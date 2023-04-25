@@ -6,13 +6,13 @@ import joblib
 scaler = joblib.load("A:/website/scalers.save")
 
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__, template_folder='A:/website/template')
 model = joblib.load('A:/website/modelss.pkl')
 
 @app.route("/home")
 @app.route("/")
 def hello():
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/predict", methods = ["GET", "POST"])
 def predict():
