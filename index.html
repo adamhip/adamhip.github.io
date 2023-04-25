@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Quality Predictor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Water Quality Predictor</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST" action="/predict">
+                    <div class="form-group">
+                        <label for="ph">pH:</label>
+                        <input type="text" class="form-control" id="ph" placeholder="Enter pH" name="ph">
+                    </div>
+                    <div class="form-group">
+                        <label for="hardness">Hardness:</label>
+                        <input type="text" class="form-control" id="hardness" placeholder="Enter Hardness" name="hardness">
+                    </div>
+                    <div class="form-group">
+                        <label for="solids">Solids:</label>
+                        <input type="text" class="form-control" id="solids" placeholder="Enter Solids" name="solids">
+                    </div>
+                    <div class="form-group">
+                        <label for="chloramines">Chloramines:</label>
+                        <input type="text" class="form-control" id="chloramines" placeholder="Enter Chloramines" name="chloramines">
+                    <div class="form-group">
+                        <label for="Sulfate">Sulfate:</label>
+                        <input type="text" class="form-control" id="sulfate" placeholder="Enter Sulfate" name="sulfate">
+                    <div class="form-group">
+                            <label for="Conductivity">Conductivity:</label>
+                            <input type="text" class="form-control" id="conductivity" placeholder="Enter Conductivity" name="conductivity">
+                    <div class="form-group">
+                        <label for="organic_carbon">Organic Carbon:</label>
+                        <input type="text" class="form-control" id="organic_carbon" placeholder="Enter organic_carbon" name="organic_carbon">
+                    <div class="form-group">
+                        <label for="trihalomethanes">Trihalomethanes:</label>
+                        <input type="text" class="form-control" id="trihalomethanes" placeholder="Enter trihalomethanes" name="trihalomethanes">
+                    <div class="form-group">
+                        <label for="turbidity">Turbidity:</label>
+                        <input type="text" class="form-control" id="turbidity" placeholder="turbidity" name="turbidity">
+                    <button type="submit" class="button">Detect</button>
+    <center>
+                <h1>{{prediction_text}}</h1>
+    </center>
+</body>
+</html>
