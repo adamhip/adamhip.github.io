@@ -33,7 +33,7 @@ def predict():
             prediction = "tidak aman"
 
 
-        return render_template('home.html', prediction_text= "Air ini {} untuk manusia konsumsi ".format(prediction))
+        return render_template('index.html', prediction_text= "Air ini {} untuk manusia konsumsi ".format(prediction))
 
         
 
