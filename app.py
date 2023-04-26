@@ -6,7 +6,7 @@ import joblib
 scaler = joblib.load("A:/website/scalers.save")
 
 
-app = Flask(__name__, template_folder='A:/website/template')
+app = Flask(__name__)
 model = joblib.load('A:/website/modelss.pkl')
 
 @app.route("/home")
